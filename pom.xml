@@ -18,6 +18,9 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.io.version>2.5</commons.io.version>
+        <nacos.version>2.2.1.RELEASE</nacos.version>
     </properties>
     <modules>
         <module>gulimall-coupon</module>
@@ -25,6 +28,9 @@
         <module>gulimall-product</module>
         <module>gulimall-order</module>
         <module>gulimall-ware</module>
+        <module>gulimall-common</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
     </modules>
 
     <dependencyManagement>
