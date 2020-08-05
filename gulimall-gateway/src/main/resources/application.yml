@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test_aa
+          uri: http://www.baidu.com
+          predicates:
+            - Query=test,a
+        - id: admin_route
+          uri: lb://gulimall-admin
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*), /renren-fast/$\{segment}
+
+#      globalcors:
+#        cors-configurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods: "*"
+#            allowedHeaders: "*"
+#            allowedCredentials: true
+
+server:
+  port: 8888
